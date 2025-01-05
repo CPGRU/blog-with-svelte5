@@ -1,6 +1,5 @@
 <script>
     let { data } = $props();
-    $inspect(data.todos)
 </script>
 
 <h1>todo list</h1>

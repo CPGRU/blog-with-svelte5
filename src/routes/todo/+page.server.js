@@ -1,6 +1,7 @@
 import pool from '$lib/server/db';
 
-export async function load(){
+export async function load(request){
+    console.log(request);
     const query = `
     SELECT id, description, complete
     FROM todos
