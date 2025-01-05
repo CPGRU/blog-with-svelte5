@@ -30,6 +30,19 @@ export const actions = {
         );
         console.log("insert data", result)
     },
+    delete: async({request})=>{
+        const data = await request.formData();
+        const id = data.get('id');
 
+        const query = `
+        DELETE FROM todos
+        WHERE id=$1
+        `;
+        const result =await pool.query(
+            query,
+            [id]
+        );
+        console.log('delete data', result)
+    }
 };
 
